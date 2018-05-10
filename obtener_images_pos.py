@@ -77,10 +77,6 @@ while x <= 12:
 arch.close()
 arch_etiqueta.close()
 
-fail = open("etiquetas_imagenes.txt","r")
-for k in fail:
-    print k
-
 promedio = (maxY + minY / 2)
 print "3 Tamanios en Y"
 print "Maximo:", maxY
