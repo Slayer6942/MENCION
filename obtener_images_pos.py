@@ -32,6 +32,7 @@ def max_min(x, maxX, minX, y, maxY, minY):
 arch = open("entrenamiento/positivas/positivas.txt","w")
 arch_etiqueta = open("etiquetas_imagenes.txt","w")
 promedio, maxX, maxY, minX, minY = 0, 0, 0, 0, 0
+
 x = 1
 while x <= 12:
     imagen = Image.open("images/Imagen_"+str(x)+".jpg")
@@ -79,7 +80,7 @@ while x <= 12:
 arch.close()
 arch_etiqueta.close()
 
-promedio = (maxY + minY / 2)
+promedio = (maxY + minY) / 2
 print "3 Tamanios en Y"
 print "Maximo:", maxY
 print "Minimo:", minY
