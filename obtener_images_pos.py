@@ -14,9 +14,21 @@ def comprobar(x1,y1,x2,y2):
         Y2 = y1
     return X1,Y1,X2,Y2
 
+def max_min(x, maxX, minX, y, maxY, minY):
+    if maxX <= x:
+        maxX = x
+    elif minX >= x or minX == 0:
+        minX = x
+
+    if maxY <= y:
+        maxY = y
+    elif minY >= y or minY == 0:
+        minY = y
+    return maxX, maxY, minX, minY
+
 arch = open("entrenamiento/positivas/positivas.txt","w")
 arch_etiqueta = open("etiquetas_imagenes.txt","w")
-
+promedio, maxX, maxY, minX, minY = 0, 0, 0, 0, 0
 x = 1
 while x <= 12:
     imagen = Image.open("images/Imagen_"+str(x)+".jpg")
@@ -52,6 +64,9 @@ while x <= 12:
         else:
             dimY = py1 - py2
         #print px1,py1,dimX,dimY
+        #Obtenemos tamanios minimos y maximo de X e Y
+        maxX,maxY, minX, minY = max_min(dimX, maxX, minX, dimY, maxY, minY)
+
         region = imagen.crop((px1,py1,px2,py2))
         region.save("entrenamiento/positivas/"+str(x)+"_"+str(cont)+".jpg") #El guardado de imagenes ya no es necesario
         arch.write("..\..\images\Imagen_"+str(x)+".jpg 1 "+ str(px1)+" "+str(py1)+" "+str(dimX)+" "+str(dimY)+"\n")
@@ -64,3 +79,13 @@ arch_etiqueta.close()
 fail = open("etiquetas_imagenes.txt","r")
 for k in fail:
     print k
+
+promedio = (maxY + minY / 2)
+print "3 Tamanios en X"
+print "Maximo:", maxX
+print "Minimo:", minX
+print "Promedio: ", promedio
+print "\n"
+print "5 Tamanios en Y"
+print "Maximo:", maxY
+print "Minimo:", minY
