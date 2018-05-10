@@ -1,6 +1,8 @@
 from PIL import Image, ImageDraw
 from lxml import etree
 
+#Esta funcion invierte las posiciones de los vertices de las imagenes, para que todos los datos comiences
+#desde la esquina superior izquierda
 def comprobar(x1,y1,x2,y2):
     X1=x1
     Y1=y1
