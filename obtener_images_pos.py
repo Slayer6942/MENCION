@@ -24,6 +24,7 @@ def max_min(x, maxX, minX, y, maxY, minY):
         maxY = y
     elif minY >= y or minY == 0:
         minY = y
+
     return maxX, maxY, minX, minY
 
 arch = open("entrenamiento/positivas/positivas.txt","w")
@@ -81,11 +82,11 @@ for k in fail:
     print k
 
 promedio = (maxY + minY / 2)
-print "3 Tamanios en X"
-print "Maximo:", maxX
-print "Minimo:", minX
-print "Promedio: ", promedio
-print "\n"
-print "5 Tamanios en Y"
+print "3 Tamanios en Y"
 print "Maximo:", maxY
 print "Minimo:", minY
+print "Promedio: ", promedio
+print "\n"
+print "5 Tamanios en X"
+print "Maximo:", maxX
+print "Minimo:", minX
