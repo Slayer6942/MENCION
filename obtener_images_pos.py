@@ -81,11 +81,15 @@ arch.close()
 arch_etiqueta.close()
 
 promedio = (maxY + minY) / 2
+tam1 = minX + (maxX-minX)/4
+tam2 = tam1 + (maxX-minX)/4
+tam3 = tam2 + (maxX-minX)/4
 print "3 Tamanios en Y"
 print "Maximo:", maxY
 print "Minimo:", minY
 print "Promedio: ", promedio
 print "\n"
 print "5 Tamanios en X"
-print "Maximo:", maxX
 print "Minimo:", minX
+print "Tamanios intermedios: ", tam1, tam2, tam3
+print "Maximo:", maxX
