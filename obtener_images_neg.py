@@ -37,6 +37,9 @@ while cont <= 100:
         if x > int(data[0]) and x < mitad and y > int(data[1]) and y < int(data[1])+int(data[3]):
             x = x+(int(data[2]) / 2)+100
             print(cont)
+        if x < int(data[0]) and x>500:
+            x = random.randint(0,400)
+         
 
     caja = (x,y,x+RDX,y+RDY)
 
