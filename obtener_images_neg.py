@@ -17,28 +17,34 @@ def negToPos(x):
 
 imagen = Image.open("images/Imagen_1.jpg")
 
-dimX = [50,100,150,200,250]
-dinY = [50,100, 150]
+dimX = [177,240,303,366,430]
+dimY = [106,27, 66]
 
 arch = open("entrenamiento/negativas/negativas.txt","w")
 cont = 0
 
 datos_pos = obtener_pos()
-while cont <= 100:
+while cont <= 1000:
     RDX = dimX[random.randint(0,len(dimX)-1)]
-    RDY = dimX[random.randint(0,len(dinY)-1)]
-    x = random.randint(0,imagen.size[0]-RDX)
+    RDY = dimY[random.randint(0,len(dimY)-1)]
+  #  x = random.randint(0,imagen.size[0]-RDX)
+
+    x= random.randint(0,imagen.size[0]-RDX)
     y = random.randint(0,imagen.size[1]-RDY)
 
     for data in datos_pos:
         data = data.split(",")
         mitad = int(data[0]) + (int(data[2]) / 2)
-        print data#, mitad, x,y
-        if x > int(data[0]) and x < mitad and y > int(data[1]) and y < int(data[1])+int(data[3]):
-            x = x+(int(data[2]) / 2)+100
-            print(cont)
-        if x < int(data[0]) and x>500:
-            x = random.randint(0,400)
+        print(data)#, mitad, x,y
+        if x>500 and x <1000:
+            x= random.randint(0,100)
+
+        #if x > int(data[0]) and x < mitad and y > int(data[1]) and y < int(data[1])+int(data[3]):
+           # x = x+(int(data[2]))+300
+           #x=random.randint(0,100)
+        #print(cont)
+        #if x < int(data[0]) and x>200:
+        #    x = random.randint(0,100)
          
 
     caja = (x,y,x+RDX,y+RDY)
