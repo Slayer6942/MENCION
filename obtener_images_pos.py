@@ -33,6 +33,8 @@ arch = open("entrenamiento/positivas/positivas.txt","w")
 arch_etiqueta = open("etiquetas_imagenes.txt","w")
 promedio, maxX, maxY, minX, minY = 0, 0, 0, 0, 0
 
+variaciones = [[-2,-2],[-2,0],[-2,2],[0,2],[2,2],[2,0],[2,-2],[0,-2],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1]]
+
 x = 1
 while x <= 12:
     imagen = Image.open("images/Imagen_"+str(x)+".jpg")
@@ -40,7 +42,6 @@ while x <= 12:
     cont =1
 
     raiz=doc.getroot()
-    #for i in range(0,5):
     for i in range(4,len(raiz),1):
         t1 = raiz[i]
         #------------------------------------------------------------
@@ -81,55 +82,12 @@ while x <= 12:
         arch.write("..\..\images\Imagen_"+str(x)+".jpg 1 "+ str(px1)+" "+str(py1)+" "+str(dimX)+" "+str(dimY)+"\n")
         arch_etiqueta.write(str(cont)+","+str(px1)+","+str(py1)+","+str(dimX)+","+str(dimY)+"\n")
         cont += 1
-        #cont2=1
+        cont2=1
 
-        reg1 = imagen.crop((px1, py1+1, px2, py2))
-        reg1.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) +"_1"+ ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg2 = imagen.crop((px1+1, py1+1, px2, py2))
-        reg2.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_2" +  ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg3 = imagen.crop((px1+1 , py1, px2, py2))
-        reg3.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_3" +   ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg4 = imagen.crop((px1+1, py1-1, px2, py2))
-        reg4.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_4" +  ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg5 = imagen.crop((px1, py1-1, px2, py2))
-        reg5.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_5" + ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg6 = imagen.crop((px1-1 , py1-1, px2, py2))
-        reg6.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_6" + ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg7 = imagen.crop((px1-1, py1, px2, py2))
-        reg7.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_7" +  ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg8 = imagen.crop((px1 -1, py1+1, px2, py2))
-        reg8.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_8" + ".jpg")  # El guardado de imagenes ya no es necesario
-#-----------------------------
-        reg9 = imagen.crop((px1, py1 + 2, px2, py2))
-        reg9.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_9" + ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg10 = imagen.crop((px1 + 2, py1 + 2, px2, py2))
-        reg10.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_10" +".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg11 = imagen.crop((px1 + 2, py1, px2, py2))
-        reg11.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_11" + ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg12= imagen.crop((px1 + 2, py1 - 2, px2, py2))
-        reg12.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_12" +  ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg13 = imagen.crop((px1, py1 - 2, px2, py2))
-        reg13.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_13" +  ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg14 = imagen.crop((px1 - 2, py1 - 2, px2, py2))
-        reg14.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_14" +  ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg15= imagen.crop((px1 - 2, py1, px2, py2))
-        reg15.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_15" + ".jpg")  # El guardado de imagenes ya no es necesario
-
-        reg16= imagen.crop((px1 - 2, py1 + 2, px2, py2))
-        reg16.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_16" +  ".jpg")  # El guardado de imagenes ya no es necesario
+        for col in variaciones:
+            zona = imagen.crop((px1+col[0], py1+col[1], px2, py2))
+            zona.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_" + str(cont2) + ".jpg")
+            cont2 += 1
 
         #arch.write("..\..\images\Imagen_" + str(x) + ".jpg 1 " + str(px1) + " " + str(py1) + " " + str(dimX) + " " + str(dimY) + "\n")
         #arch_etiqueta.write(str(cont2) + "," + str(px1) + "," + str(py1) + "," + str(dimX) + "," + str(dimY) + "\n")
