@@ -33,7 +33,7 @@ arch = open("entrenamiento/positivas/positivas.txt","w")
 arch_etiqueta = open("etiquetas_imagenes.txt","w")
 promedio, maxX, maxY, minX, minY = 0, 0, 0, 0, 0
 
-variaciones = [[-2,-2],[-2,0],[-2,2],[0,2],[2,2],[2,0],[2,-2],[0,-2],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1]]
+variaciones = [[-2,-2],[-2,0],[-2,2],[0,2],[2,2],[2,0],[2,-2],[0,-2],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[0,0]]
 
 x = 1
 while x <= 12:
@@ -74,26 +74,18 @@ while x <= 12:
         #Obtenemos tamanios minimos y maximo de X e Y
         maxX,maxY, minX, minY = max_min(dimX, maxX, minX, dimY, maxY, minY)
 
-        region = imagen.crop((px1,py1,px2,py2))
-
-
-
-        region.save("entrenamiento/positivas/"+str(x)+"_"+str(cont)+".jpg") #El guardado de imagenes ya no es necesario
-        arch.write("..\..\images\Imagen_"+str(x)+".jpg 1 "+ str(px1)+" "+str(py1)+" "+str(dimX)+" "+str(dimY)+"\n")
-        arch_etiqueta.write(str(cont)+","+str(px1)+","+str(py1)+","+str(dimX)+","+str(dimY)+"\n")
-        cont += 1
         cont2=1
 
         for col in variaciones:
             zona = imagen.crop((px1+col[0], py1+col[1], px2, py2))
             zona.save("entrenamiento/positivas/" + str(x) + "_" + str(cont) + "_" + str(cont2) + ".jpg")
+            arch.write("..\..\images\Imagen_" + str(x) + ".jpg 1 " + str(px1+col[0]) + " " + str(py1+col[1]) + " " + str(dimX) + " " + str(dimY) + "\n")
+            arch_etiqueta.write(str(cont) + "," + str(px1+col[0]) + "," + str(py1+col[1]) + "," + str(dimX) + "," + str(dimY) + "\n")
+            cont += 1
             cont2 += 1
 
-        #arch.write("..\..\images\Imagen_" + str(x) + ".jpg 1 " + str(px1) + " " + str(py1) + " " + str(dimX) + " " + str(dimY) + "\n")
-        #arch_etiqueta.write(str(cont2) + "," + str(px1) + "," + str(py1) + "," + str(dimX) + "," + str(dimY) + "\n")
-        #cont2=cont2+1
+    x+= 1   #No mover, ni identar hacia ningun lado
 
-    x+= 1
 arch.close()
 arch_etiqueta.close()
 
