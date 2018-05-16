@@ -11,15 +11,7 @@ def get_pixel(img, center, x, y):
     return new_value
 
 def lbp_calculated_pixel(img, x, y):
-    '''
 
-     64 | 128 |   1
-    ----------------
-     32 |   0 |   2
-    ----------------
-     16 |   8 |   4    
-
-    '''    
     center = img[x][y]
     val_ar = []
     val_ar.append(get_pixel(img, center, x-1, y+1))     # top_right
@@ -39,15 +31,17 @@ def lbp_calculated_pixel(img, x, y):
     return val
 
 def main():
-    image_file = 'images/lenna.jpg'
-    img_bgr = cv2.imread(image_file)
-    height, width, channel = img_bgr.shape
-    img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
-    img_lbp = np.zeros((height, width,3), np.uint8)
+    for nu in range(10):
+        image_file = "entrenamiento/positivas/"+ str(nu+1) +".jpg"
+        img_bgr = cv2.imread(image_file)
+        height, width, channel = img_bgr.shape
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        img_lbp = np.zeros((height, width,3), np.uint8)
 
-    for i in range(0, height):
-        for j in range(0, width):
-            img_lbp[i, j] = lbp_calculated_pixel(img_gray, i, j)
+        for i in range(0, height):
+            for j in range(0, width):
+                img_lbp[i, j] = lbp_calculated_pixel(img_gray, i, j)
+        print len(img_lbp)
 
 if __name__ == '__main__':
     main()
