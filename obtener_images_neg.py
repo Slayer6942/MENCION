@@ -21,10 +21,10 @@ dimX = [177,240,303,366,430]
 dimY = [106,27, 66]
 
 arch = open("entrenamiento/negativas/negativas.txt","w")
-cont = 0
+cont = 1
 
 datos_pos = obtener_pos()
-while cont <= 1000:
+while cont <= 100:
     RDX = dimX[random.randint(0,len(dimX)-1)]
     RDY = dimY[random.randint(0,len(dimY)-1)]
 

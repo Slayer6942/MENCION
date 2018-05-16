@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 def get_pixel(img, center, x, y):
     new_value = 0
@@ -30,18 +31,25 @@ def lbp_calculated_pixel(img, x, y):
 
     return val
 
-def main():
-    for nu in range(10):
-        image_file = "entrenamiento/positivas/"+ str(nu+1) +".jpg"
-        img_bgr = cv2.imread(image_file)
-        height, width, channel = img_bgr.shape
-        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
-        img_lbp = np.zeros((height, width,3), np.uint8)
+def analisis(archivo):
+    image_file = archivo
+    img_bgr = cv2.imread(image_file)
+    height, width, channel = img_bgr.shape
+    img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+    img_lbp = np.zeros((height, width, 3), np.uint8)
 
-        for i in range(0, height):
-            for j in range(0, width):
-                img_lbp[i, j] = lbp_calculated_pixel(img_gray, i, j)
-        print len(img_lbp)
+    for i in range(0, height):
+        for j in range(0, width):
+            img_lbp[i, j] = lbp_calculated_pixel(img_gray, i, j)
+    return  str(img_lbp)
+
+def main():
+    datos = open("datos.txt","w")
+    positivas = len(os.listdir("entrenamiento/positivas"))
+    negativas = len(os.listdir("entrenamiento/negativas"))
+
+    for nu in range(1,positivas):
+        datos.write(analisis("entrenamiento/positivas/" + str(nu) + ".jpg")+"\n")
 
 if __name__ == '__main__':
     main()
