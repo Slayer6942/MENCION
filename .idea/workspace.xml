@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2997bc31-9cd6-42fd-a340-5ed552ac249a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MENCION.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MENCION.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lbp.py" beforeDir="false" afterPath="$PROJECT_DIR$/lbp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obtener_images_neg.py" beforeDir="false" afterPath="$PROJECT_DIR$/obtener_images_neg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obtener_images_pos.py" beforeDir="false" afterPath="$PROJECT_DIR$/obtener_images_pos.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="obtener_images_neg.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/obtener_images_neg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="816">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -27,27 +27,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lbp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lbp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lbp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-568">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="matriz_asistencia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matriz_asistencia.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="obtener_images_pos.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/obtener_images_pos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207" />
+            <state relative-caret-position="333">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obtener_images_pos.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/obtener_images_pos.py">
+      <file leaf-file-name="prueba_con_scikit.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prueba_con_scikit.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -67,11 +71,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/obtener_images_neg.py" />
-        <option value="$PROJECT_DIR$/obtener_images_pos.py" />
         <option value="$USER_HOME$/Downloads/local_binary_patterns-master/local_binary_patterns-master/lbp.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/lbp.py" />
+        <option value="$PROJECT_DIR$/obtener_images_neg.py" />
+        <option value="$PROJECT_DIR$/obtener_images_pos.py" />
       </list>
     </option>
   </component>
@@ -86,6 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,7 +106,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,17 +255,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19661458" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009914" side_tool="true" weight="0.35042736" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990086" weight="0.42877492" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49966952" weight="0.32905984" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4990086" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990086" visible="true" weight="0.4275862" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4990086" weight="0.32905984" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -315,7 +320,6 @@
     <entry file="file://$PROJECT_DIR$/obtener_images_pos.py" />
     <entry file="file://$PROJECT_DIR$/lbp.py" />
     <entry file="file://$PROJECT_DIR$/regresorLogistico.py" />
-    <entry file="file://$PROJECT_DIR$/prueba_con_scikit.py" />
     <entry file="file://$PROJECT_DIR$/obtener_images_neg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -431,30 +435,32 @@
     <entry file="file://$USER_HOME$/Downloads/local_binary_patterns-master/local_binary_patterns-master/lbp.py" />
     <entry file="file://$USER_HOME$/Downloads/local_binary_patterns-master/local_binary_patterns-master/two_bin.py" />
     <entry file="file://$PROJECT_DIR$/matriz_asistencia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/obtener_images_pos.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba_con_scikit.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/obtener_images_neg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="816">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lbp.py">
+    <entry file="file://$PROJECT_DIR$/obtener_images_pos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="333">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
         </state>
       </provider>
     </entry>
