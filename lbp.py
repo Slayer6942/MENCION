@@ -49,9 +49,11 @@ def escribir_datos(D, largo, tipo, archivo):
 
 
 def main():
-    datos = open("prueba.txt", "w")
-    positivas = len(os.listdir("entrenamiento/positivas"))
-    negativas = len(os.listdir("entrenamiento/negativas"))
+    datos = open("lbp.txt", "w")
+    #positivas = len(os.listdir("entrenamiento/positivas"))
+    #negativas = len(os.listdir("entrenamiento/negativas"))
+    positivas = 10
+    negativas = 10
     datosP = [0] * positivas
     datosN = [0] * negativas
 
