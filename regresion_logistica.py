@@ -15,7 +15,7 @@ import seaborn as sb
 dataframe = pd.read_csv("prueba.csv")
 X = np.array(dataframe.drop(['clase'],1))
 y = np.array(dataframe['clase'])
-X= (X - mean(X))/std(X)
+X = (X - mean(X))/std(X)
 print(dataframe.groupby('clase').size())
 
 #Creamos nuestro modelo y hacemos que se ajuste (fit) a nuestro conjunto de entradas X y salidas ‘y’
@@ -43,5 +43,12 @@ print(classification_report(Y_validation, predictions))
 #Creamos data frame para probar las predicciones de nuestro modelo
 dataframe_prueba = pd.read_csv("datos-prueba.csv")
 pX = np.array(dataframe_prueba.drop(['clase'],1))
-pX= (pX - mean(X))/std(pX)
-print(model.predict(X))
+pX = (pX - mean(X))/std(pX)
+yNew = model.predict(pX) #Me entrega las predicciones redondeadas
+print(yNew)
+
+yNew = model.predict_proba(pX) #Me entrega las predicciones en porcentaje
+# Muestro entradas y probabilidades de prediccion
+for i in range(len(X)):
+	print("Img %s\n %s \nPrediccion = %s \n" % (i,pX[i], yNew[i]))
+
