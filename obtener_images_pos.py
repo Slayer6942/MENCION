@@ -39,7 +39,7 @@ variaciones = [[-2,-2],[-2,0],[-2,2],[0,2],[2,2],[2,0],[2,-2],[0,-2],[-1,-1],[-1
 nombre = 0
 x = 1
 
-while x <= 12:
+while x <= 1:
     imagen = Image.open("images/Imagen_"+str(x)+".jpg")
     doc = etree.parse('images/imagen_'+str(x)+'.xml')
     cont =1

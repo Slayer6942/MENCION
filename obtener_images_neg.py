@@ -17,7 +17,7 @@ arch = open("entrenamiento/negativas/negativas.txt","w")
 cont = 0
 
 #En este ciclo generamos las imagenes negativas
-while cont <= 10000:
+while cont <= 100:
     #Seleccionamos un X,Y aleatorio de los array dimX y dimY
     RDX = dimX[random.randint(0,len(dimX)-1)]
     RDY = dimY[random.randint(0,len(dimY)-1)]
