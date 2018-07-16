@@ -78,8 +78,7 @@ def main():
     datos = open("lbp.csv", "w")
     positivas = len(os.listdir("entrenamiento/positivas"))-1
     negativas = len(os.listdir("entrenamiento/negativas"))-1
-    #positivas = 10
-    #negativas = 10
+
     datosP = [0] * (positivas)
     datosN = [0] * (negativas)
 
