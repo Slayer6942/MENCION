@@ -66,9 +66,10 @@ for i in range(len(pX)):
 
 
 
-print("vectooor ",vector)
 
 L=sorted(vector, reverse = True)
-print(L)
+
+np.savetxt('fileScore.txt', L[:10], fmt='%.9f')
+
 
 
