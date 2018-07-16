@@ -47,8 +47,28 @@ pX = (pX - mean(X))/std(pX)
 yNew = model.predict(pX) #Me entrega las predicciones redondeadas
 print(yNew)
 
+
+#en este vector se guardaran los datos de prediccion
+vector=[]
+
 yNew = model.predict_proba(pX) #Me entrega las predicciones en porcentaje
+
+
 # Muestro entradas y probabilidades de prediccion
-for i in range(len(X)):
+for i in range(len(pX)):
+	string=[]
+
+	string.append(yNew[i][1])
+
+	vector.append(string)
+
 	print("Img %s\n %s \nPrediccion = %s \n" % (i,pX[i], yNew[i]))
+
+
+
+print("vectooor ",vector)
+
+L=sorted(vector, reverse = True)
+print(L)
+
 
