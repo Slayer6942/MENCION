@@ -87,6 +87,7 @@ def main():
     for nu in range(negativas):
         datosN[nu] = analisis("entrenamiento/negativas/" + str(nu) + ".jpg", datos, "N")
     maximo = calcular_maximo(datosP, datosN)
+    datos.write("valor,"*maximo+"clase")
     escribir_datos(datosP, positivas, 1, datos, maximo)
     escribir_datos(datosN, negativas, 0, datos, maximo)
 
