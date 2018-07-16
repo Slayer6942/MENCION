@@ -14,7 +14,7 @@ dimX = [177,240,303,366,430]
 dimY = [106,27, 66]
 
 arch = open("entrenamiento/negativas/negativas.txt","w")
-cont = 1
+cont = 0
 
 #En este ciclo generamos las imagenes negativas
 while cont <= 10000:

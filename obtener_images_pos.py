@@ -36,7 +36,7 @@ promedio, maxX, maxY, minX, minY = 0, 0, 0, 0, 0
 
 #esta variable contiene la cantidad de pixeles que deben correrse cada imagen en X,Y para ovtener las 8 variaciones
 variaciones = [[-2,-2],[-2,0],[-2,2],[0,2],[2,2],[2,0],[2,-2],[0,-2],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[0,0]]
-nombre = 1
+nombre = 0
 x = 1
 
 while x <= 12:
