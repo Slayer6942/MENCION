@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 #Creamos el Modelo de Regresion Logistica
 #Creamos data frame de los datos
-dataframe = pd.read_csv("prueba.csv")
+dataframe = pd.read_csv("lbp.csv")
 X = np.array(dataframe.drop(['clase'],1))
 y = np.array(dataframe['clase'])
 X = (X - mean(X))/std(X)
@@ -54,13 +54,12 @@ for i in range(len(pX)):
     #string.append(yNew[i][1])
     mejor_score.sort()
     mejor_score.extend([[yNew[i][1],i]])
-    if len(mejor_score) > 10:
+    if len(mejor_score) > 200:
         mejor_score.pop(0)
 
     print("Img %s\n %s \nPrediccion = %s \n" % (i,pX[i], yNew[i]))
 
 mejor_score.sort(reverse = True)
-
 arch = open('fileScore.txt',"w")
 for k in mejor_score:
     arch.write(str(k[0])+", "+str(k[1])+"\n")
