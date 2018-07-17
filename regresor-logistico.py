@@ -42,15 +42,11 @@ print(classification_report(Y_validation, predictions))
 #Creamos data frame para probar las predicciones de nuestro modelo
 dataframe_prueba = pd.read_csv("datos-prueba.csv")
 pX = np.array(dataframe_prueba.drop(['clase'],1))
-
 pX = (pX - mean(X))/std(pX)
 yNew = model.predict(pX) #Me entrega las predicciones redondeadas
 
-
 #en este vector se guardaran los datos de prediccion
-
 yNew = model.predict_proba(pX) #Me entrega las predicciones en porcentaje
-
 
 # Muestro entradas y probabilidades de prediccion
 mejor_score = [[0,0]]
